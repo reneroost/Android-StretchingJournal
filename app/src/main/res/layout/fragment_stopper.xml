@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             style="?android:attr/buttonBarPositiveButtonStyle"
+            android:onClick="onKlikkAlusta"
             android:textSize="24sp"
             android:text="@string/alusta"/>
 
@@ -37,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             style="?android:attr/buttonBarNegativeButtonStyle"
+            android:onClick="onKlikkPeatu"
             android:textSize="24sp"
             android:text="@string/peatu"/>
 
@@ -46,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             style="?android:attr/buttonBarNeutralButtonStyle"
+            android:onClick="onKlikkNulli"
             android:textSize="24sp"
             android:text="@string/nulli"/>
 
