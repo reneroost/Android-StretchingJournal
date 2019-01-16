@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.Locale;
 
 public class StopperFragment extends Fragment implements View.OnClickListener {
@@ -19,9 +17,6 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
     private int sekundid = 0;
     private boolean stopperKaib;
     private TextView ajaVaade;
-    private Button alustaNupp;
-    private Button peatuNupp;
-    private Button nulliNupp;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,9 +32,9 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
 
         ajaVaade = vaade.findViewById(R.id.tekstivaade_aeg);
 
-        alustaNupp = (Button) vaade.findViewById(R.id.nupp_alusta);
-        peatuNupp = (Button) vaade.findViewById(R.id.nupp_peatu);
-        nulliNupp = (Button) vaade.findViewById(R.id.nupp_nulli);
+        Button alustaNupp = vaade.findViewById(R.id.nupp_alusta);
+        Button peatuNupp = vaade.findViewById(R.id.nupp_peatu);
+        Button nulliNupp = vaade.findViewById(R.id.nupp_nulli);
 
         alustaNupp.setOnClickListener(this);
         peatuNupp.setOnClickListener(this);
