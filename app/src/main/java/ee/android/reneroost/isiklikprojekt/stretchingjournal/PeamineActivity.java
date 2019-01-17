@@ -22,5 +22,14 @@ public class PeamineActivity extends AppCompatActivity {
                     .commit();
         }
 
+        Fragment fragment2 = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner2);
+
+        if (fragment2 == null) {
+            fragment2 = new KiirseadedFragment();
+            fragmendiHaldur.beginTransaction()
+                    .add(R.id.fragmendi_konteiner2, fragment2)
+                    .commit();
+        }
+
     }
 }

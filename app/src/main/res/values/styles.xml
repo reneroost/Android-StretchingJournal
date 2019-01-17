@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Horisontaalne eraldusjoon -->
+    <style name="EraldusjoonHorisontaalne">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
 </resources>

@@ -7,6 +7,10 @@
     <string name="peatu">Stop</string>
     <string name="nulli">Reset</string>
 
+    <!-- Kiirseaded -->
+    <string name="vali_kestvus">Choose duration</string>
+    <string name="vali_harjutus">Choose exercise</string>
+    <string name="sekundid">&#160;seconds</string>
 
     <string name="test_tekst">TestString</string>
 
