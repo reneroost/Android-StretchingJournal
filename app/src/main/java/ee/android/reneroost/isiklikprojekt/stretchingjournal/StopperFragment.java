@@ -8,15 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.Locale;
 
 public class StopperFragment extends Fragment implements View.OnClickListener {
 
-    private int sekundid = 0;
+    private int sekundid;
     private boolean stopperKaib;
     private TextView ajaVaade;
+
+    private final int[] kestused = {30, 60 , 90};
+    private int valitudKestus = kestused[0];
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,8 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
         View vaade = taispuhuja.inflate(R.layout.fragment_stopper, konteiner, false);
 
         ajaVaade = vaade.findViewById(R.id.tekstivaade_aeg);
+        sekundid = valitudKestus;
+        kuvaStopperiNait(sekundid);
 
         Button alustaNupp = vaade.findViewById(R.id.nupp_alusta);
         Button peatuNupp = vaade.findViewById(R.id.nupp_peatu);
@@ -39,6 +45,38 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
         alustaNupp.setOnClickListener(this);
         peatuNupp.setOnClickListener(this);
         nulliNupp.setOnClickListener(this);
+
+        TextView raadionuppKestusLuhike = vaade.findViewById(R.id.raadionupp_kestvus_luhike);
+        TextView raadionuppKestusKeskmine = vaade.findViewById(R.id.raadionupp_kestvus_keskmine);
+        TextView raadionuppKestusPikk = vaade.findViewById(R.id.raadionupp_kestvus_pikk);
+
+        String kestus;
+        kestus = Integer.toString(kestused[0]) + getResources().getString(R.string.sekundid);
+        raadionuppKestusLuhike.setText(kestus);
+        kestus = Integer.toString(kestused[1]) + getResources().getString(R.string.sekundid);
+        raadionuppKestusKeskmine.setText(kestus);
+        kestus = Integer.toString(kestused[2]) + getResources().getString(R.string.sekundid);
+        raadionuppKestusPikk.setText(kestus);
+
+        final RadioGroup raadioGruppKestused = vaade.findViewById(R.id.raadiogrupp_kestused);
+        raadioGruppKestused.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch(checkedId){
+                    case R.id.raadionupp_kestvus_luhike:
+                        valitudKestus = kestused[0];
+                        break;
+                    case R.id.raadionupp_kestvus_keskmine:
+                        valitudKestus = kestused[1];
+                        break;
+                    case R.id.raadionupp_kestvus_pikk:
+                        valitudKestus = kestused[2];
+                        break;
+                }
+                sekundid = valitudKestus;
+                kuvaStopperiNait(valitudKestus);
+            }
+        });
 
         return vaade;
     }
@@ -66,12 +104,7 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
 
             @Override
             public void run() {
-                int kuvatavadMinutid = sekundid / 60;
-                int kuvatavadSekundid = sekundid % 60;
-
-                String aeg = String.format(Locale.getDefault(), "%02d:%02d",
-                        kuvatavadMinutid, kuvatavadSekundid);
-                ajaVaade.setText(aeg);
+                kuvaStopperiNait(sekundid);
 
                 if (stopperKaib) {
                     sekundid++;
@@ -80,5 +113,14 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
                 kaitleja.postDelayed(this, 1000);
             }
         });
+    }
+
+    private void kuvaStopperiNait(int sekundid) {
+        int kuvatavadMinutid = sekundid / 60;
+        int kuvatavadSekundid = sekundid % 60;
+
+        String aeg = String.format(Locale.getDefault(), "%02d:%02d",
+                kuvatavadMinutid, kuvatavadSekundid);
+        ajaVaade.setText(aeg);
     }
 }

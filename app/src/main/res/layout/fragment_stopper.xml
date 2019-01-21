@@ -51,4 +51,46 @@
 
     </TableRow>
 
+    <View style="@style/EraldusjoonHorisontaalne"/>
+
+    <TextView
+        android:id="@+id/tekstivaade_vali_kestvus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:text="@string/vali_kestvus"/>
+
+    <RadioGroup
+        android:id="@+id/raadiogrupp_kestused"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/raadionupp_kestvus_luhike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/raadionupp_kestvus_keskmine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/raadionupp_kestvus_pikk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nupp_vali_harjutus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="@string/vali_harjutus"/>
+
+
 </LinearLayout>
