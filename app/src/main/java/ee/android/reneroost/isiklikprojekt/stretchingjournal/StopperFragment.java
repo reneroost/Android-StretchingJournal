@@ -1,9 +1,11 @@
 package ee.android.reneroost.isiklikprojekt.stretchingjournal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +21,7 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
     private boolean stopperKaib;
     private TextView ajaVaade;
 
-    private final int[] kestused = {30, 60 , 90};
+    private final int[] kestused = {3, 6, 9};
     private int valitudKestus = kestused[0];
 
     @Override
@@ -73,10 +75,14 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
                         valitudKestus = kestused[2];
                         break;
                 }
+                stopperKaib = false;
                 sekundid = valitudKestus;
                 kuvaStopperiNait(valitudKestus);
             }
         });
+
+        Button nuppValiHarjutus = vaade.findViewById(R.id.nupp_vali_harjutus);
+        nuppValiHarjutus.setOnClickListener(this);
 
         return vaade;
     }
@@ -94,6 +100,11 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
                 stopperKaib = false;
                 sekundid = 0;
                 break;
+            case R.id.nupp_vali_harjutus:
+                Intent minuKavatsus = new Intent(getActivity(), HarjutusteNimekirjaActivity.class);
+                getActivity().startActivity(minuKavatsus);
+                Log.w("StopperFragment", "Vali harjutus nupule vajutamine");
+                break;
         }
     }
 
@@ -106,8 +117,10 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
             public void run() {
                 kuvaStopperiNait(sekundid);
 
-                if (stopperKaib) {
-                    sekundid++;
+                if (stopperKaib && sekundid > 0) {
+                    sekundid--;
+                } else if (stopperKaib && sekundid <= 0) {
+                    stopperKaib = false;
                 }
 
                 kaitleja.postDelayed(this, 1000);
