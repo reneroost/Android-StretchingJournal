@@ -9,7 +9,7 @@ public class Harjutus {
             new Harjutus("Reie kakspealihase venitus",
                     "seistes sirgelt (põlvest sirgelt) kallutada ette"),
             new Harjutus("Tuharalihase venitus",
-                    "istuda üks jalg sirgelt ja teine risti üle põlve"),
+                    "istuda üks jalg sirgelt ja tõsta teine risti üle põlve"),
             new Harjutus("Triitsepsi venitus",
                     "seistes viia käelaba turjale ja sirutada küünarnukk üles"),
             new Harjutus("Liblikasendis venitus",
