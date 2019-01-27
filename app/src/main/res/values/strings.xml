@@ -12,6 +12,7 @@
     <string name="vali_harjutus">Choose exercise</string>
     <string name="sekundid">&#160;seconds</string>
 
+    <string name="andmebaas_pole_saadaval">Database not available</string>
     <string name="test_tekst">TestString</string>
 
 </resources>

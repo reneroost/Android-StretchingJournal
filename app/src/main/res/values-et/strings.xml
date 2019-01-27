@@ -12,6 +12,7 @@
     <string name="vali_harjutus">Vali harjutus</string>
     <string name="sekundid">&#160;sekundit</string>
 
+    <string name="andmebaas_pole_saadaval">Andmebaas pole saadaval</string>
     <string name="test_tekst">TestTekstTest</string>
 
 </resources>

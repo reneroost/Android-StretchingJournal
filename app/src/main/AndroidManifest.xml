@@ -23,7 +23,7 @@
 
         <activity android:name=".HarjutusteNimekirjaActivity">
         </activity>
-        <activity android:name=".HarjutuseActivity">
+        <activity android:name=".HarjutuseKirjeldusActivity">
         </activity>
 
 

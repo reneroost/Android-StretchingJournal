@@ -103,7 +103,6 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
             case R.id.nupp_vali_harjutus:
                 Intent minuKavatsus = new Intent(getActivity(), HarjutusteNimekirjaActivity.class);
                 getActivity().startActivity(minuKavatsus);
-                Log.w("StopperFragment", "Vali harjutus nupule vajutamine");
                 break;
         }
     }
