@@ -19,7 +19,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         andmebaas.execSQL("CREATE TABLE HarjutusteKirjeldused "
                 + "("
                 + "_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + "HarjutuseInliskeelneNimi TEXT, "
+                + "HarjutuseIngliskeelneNimi TEXT, "
                 + "HarjutuseEestikeelneNimi TEXT, "
                 + "KategooriaYldine TEXT, "
                 + "KategooriaSpetsiifiline TEXT, "
@@ -100,7 +100,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
     }
 
     private static void sisestaVenitusHarjutus(SQLiteDatabase andmebaas,
-                                               String harjutuseInliskeelneNimi,
+                                               String harjutuseIngliskeelneNimi,
                                                String harjutuseEestikeelneNimi,
                                                String kategooriaYldine,
                                                String kategooriaSpetsiifiline,
@@ -108,7 +108,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
                                                String kirjeldusPikk,
                                                int pildiRessursiId) {
         ContentValues venitusHarjutuseVaartused = new ContentValues();
-        venitusHarjutuseVaartused.put("HarjutuseInliskeelneNimi", harjutuseInliskeelneNimi);
+        venitusHarjutuseVaartused.put("HarjutuseIngliskeelneNimi", harjutuseIngliskeelneNimi);
         venitusHarjutuseVaartused.put("HarjutuseEestikeelneNimi", harjutuseEestikeelneNimi);
         venitusHarjutuseVaartused.put("KategooriaYldine", kategooriaYldine);
         venitusHarjutuseVaartused.put("KategooriaSpetsiifiline", kategooriaSpetsiifiline);

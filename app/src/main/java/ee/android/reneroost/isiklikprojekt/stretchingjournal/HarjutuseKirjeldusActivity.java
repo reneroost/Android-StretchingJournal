@@ -19,6 +19,14 @@ public class HarjutuseKirjeldusActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_harjutuse_kirjeldus);
 
+        TextView kategooriaUldineAbitekst = (TextView) findViewById(R.id.kategooria_uldine_abitekst);
+        TextView kategooriaSpetsiifilineAbitekst = (TextView) findViewById(R.id.kategooria_spetsiifiline_abitekst);
+        TextView kirjeldusLuhikeAbitekst = (TextView) findViewById(R.id.kirjeldus_luhike_abitekst);
+
+        kategooriaUldineAbitekst.setText(getResources().getString(R.string.kirjelduse_liik_kategooria_uldine));
+        kategooriaSpetsiifilineAbitekst.setText(getResources().getString(R.string.kirjelduse_liik_kategooria_spetsiifiline));
+        kirjeldusLuhikeAbitekst.setText(getResources().getString(R.string.kirjelduse_liik_kirjeldus_lyhike));
+
         int harjutuseId = (Integer) getIntent().getExtras().get(EKSTRA_HARJUTUSE_ID);
 
         SQLiteOpenHelper venitamisePaevikAndmebaasiAbistaja = new VenitamisePaevikAndmebaasiAbistaja(this);
@@ -26,7 +34,7 @@ public class HarjutuseKirjeldusActivity extends AppCompatActivity {
             SQLiteDatabase andmebaas = venitamisePaevikAndmebaasiAbistaja.getReadableDatabase();
 
             Cursor kursor = andmebaas.query("HarjutusteKirjeldused",
-                    new String[]  {"HarjutuseInliskeelneNimi", "HarjutuseEestikeelneNimi",
+                    new String[]  {"HarjutuseIngliskeelneNimi", "HarjutuseEestikeelneNimi",
                     "KategooriaYldine", "KategooriaSpetsiifiline", "KirjeldusLuhike", "KirjeldusPikk"},
                     "_id = ?",
                     new String[] {Integer.toString(harjutuseId)},
@@ -44,7 +52,7 @@ public class HarjutuseKirjeldusActivity extends AppCompatActivity {
                 TextView harjutuseEestikeelneNimi = (TextView) findViewById(R.id.harjutuse_eestikeelne_nimi);
                 TextView kategooriaYldine = (TextView) findViewById(R.id.kategooria_uldine);
                 TextView kategooriaSpetsiifiline = (TextView) findViewById(R.id.kategooria_spetsiifiline);
-                TextView kirjeldusLuhike = (TextView) findViewById(R.id.kirjeldus_lyhike);
+                TextView kirjeldusLuhike = (TextView) findViewById(R.id.kirjeldus_luhike);
                 TextView kirjeldusPikk = (TextView) findViewById(R.id.kirjeldus_pikk);
 
                 harjutuseIngliskeelneNimi.setText(harjutuseIngliskeelneNimiTekst);
