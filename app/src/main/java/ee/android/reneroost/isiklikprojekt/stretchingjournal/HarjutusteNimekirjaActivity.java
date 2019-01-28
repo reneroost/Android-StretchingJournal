@@ -32,7 +32,7 @@ public class HarjutusteNimekirjaActivity extends AppCompatActivity {
         try {
             andmebaas = venitamisepaevikAndmebaasiAbistaja.getReadableDatabase();
 
-            kursor = andmebaas.query("HarjutusteKirjeldused",
+            kursor = andmebaas.query(getResources().getString(R.string.harjutuste_kirjeldused),
                     new String[] {"_id", "HarjutuseEestikeelneNimi"},
                     null, null, null, null, null);
 
@@ -46,12 +46,6 @@ public class HarjutusteNimekirjaActivity extends AppCompatActivity {
             nimekiriHarjused.setAdapter(nimekiriAdapter);
 
 
-            if (kursor.moveToFirst()) {
-                do {
-                    String andmed = kursor.getString(kursor.getColumnIndex("HarjutuseEestikeelneNimi"));
-                    Log.w("kursor.moveToNext()", "test");
-                } while (kursor.moveToNext());
-            }
             Log.w("HarjutusteNimekirjaAct", "onCreate() try bloki lõpus");
         } catch(SQLiteException e) {
             Toast rost = Toast.makeText(this, getResources().getString(R.string.andmebaas_pole_saadaval),

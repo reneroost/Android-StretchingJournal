@@ -7,11 +7,6 @@
     android:padding="4dp">
 
     <TextView
-        android:id="@+id/harjutuse_inglisekeelne_nimi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"/>
-    <TextView
         android:id="@+id/harjutuse_eestikeelne_nimi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

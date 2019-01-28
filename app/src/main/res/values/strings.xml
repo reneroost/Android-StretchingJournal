@@ -12,9 +12,12 @@
     <string name="vali_harjutus">Choose exercise</string>
     <string name="sekundid">&#160;seconds</string>
 
+    <!-- Harjutuse kirjeldus -->
     <string name="kirjelduse_liik_kategooria_uldine">General category</string>
     <string name="kirjelduse_liik_kategooria_spetsiifiline">Specific muscle groups</string>
     <string name="kirjelduse_liik_kirjeldus_lyhike">Short description</string>
+
+    <string name="harjutuste_kirjeldused">HarjutusteKirjeldusedIngliskeeles</string>
 
     <string name="andmebaas_pole_saadaval">Database not available</string>
     <string name="test_tekst">TestString</string>

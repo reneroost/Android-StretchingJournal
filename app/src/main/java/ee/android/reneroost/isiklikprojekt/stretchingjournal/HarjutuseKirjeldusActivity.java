@@ -33,7 +33,7 @@ public class HarjutuseKirjeldusActivity extends AppCompatActivity {
         try {
             SQLiteDatabase andmebaas = venitamisePaevikAndmebaasiAbistaja.getReadableDatabase();
 
-            Cursor kursor = andmebaas.query("HarjutusteKirjeldused",
+            Cursor kursor = andmebaas.query(getResources().getString(R.string.harjutuste_kirjeldused),
                     new String[]  {"HarjutuseIngliskeelneNimi", "HarjutuseEestikeelneNimi",
                     "KategooriaYldine", "KategooriaSpetsiifiline", "KirjeldusLuhike", "KirjeldusPikk"},
                     "_id = ?",
@@ -48,14 +48,12 @@ public class HarjutuseKirjeldusActivity extends AppCompatActivity {
                 String kirjeldusLuhikeTekst = kursor.getString(4);
                 String kirjeldusPikkTekst = kursor.getString(5);
 
-                TextView harjutuseIngliskeelneNimi = (TextView) findViewById(R.id.harjutuse_inglisekeelne_nimi);
                 TextView harjutuseEestikeelneNimi = (TextView) findViewById(R.id.harjutuse_eestikeelne_nimi);
                 TextView kategooriaYldine = (TextView) findViewById(R.id.kategooria_uldine);
                 TextView kategooriaSpetsiifiline = (TextView) findViewById(R.id.kategooria_spetsiifiline);
                 TextView kirjeldusLuhike = (TextView) findViewById(R.id.kirjeldus_luhike);
                 TextView kirjeldusPikk = (TextView) findViewById(R.id.kirjeldus_pikk);
 
-                harjutuseIngliskeelneNimi.setText(harjutuseIngliskeelneNimiTekst);
                 harjutuseEestikeelneNimi.setText(harjutuseEestikeelneNimiTekst);
                 kategooriaYldine.setText(kategooriaYldineTekst);
                 kategooriaSpetsiifiline.setText(kategooriaSpetsiifilineTekst);
