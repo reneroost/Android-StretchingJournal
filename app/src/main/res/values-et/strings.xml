@@ -16,6 +16,9 @@
     <string name="kirjelduse_liik_kategooria_uldine">Üldine kategooria</string>
     <string name="kirjelduse_liik_kategooria_spetsiifiline">Lihasgrupid</string>
     <string name="kirjelduse_liik_kirjeldus_lyhike">Lühikirjeldus</string>
+    <string name="pilt_venitus_harjutus">Venitusharjutuse pilt</string>
+    <string name="nupp_tapsem_kirjeldus_naita">Näita täpsemat kirjeldust</string>
+    <string name="nupp_tapsem_kirjeldus_peida">Peida täpsem kirjeldus</string>
 
     <string name="harjutuste_kirjeldused">HarjutusteKirjeldusedEestikeeles</string>
 

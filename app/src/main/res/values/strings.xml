@@ -16,6 +16,9 @@
     <string name="kirjelduse_liik_kategooria_uldine">General category</string>
     <string name="kirjelduse_liik_kategooria_spetsiifiline">Specific muscle groups</string>
     <string name="kirjelduse_liik_kirjeldus_lyhike">Short description</string>
+    <string name="pilt_venitus_harjutus">Picture of proper stretching technique</string>
+    <string name="nupp_tapsem_kirjeldus_naita">Show detailed description</string>
+    <string name="nupp_tapsem_kirjeldus_peida">Hide detailed descrition</string>
 
     <string name="harjutuste_kirjeldused">HarjutusteKirjeldusedIngliskeeles</string>
 
