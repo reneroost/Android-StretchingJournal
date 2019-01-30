@@ -21,6 +21,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
                 + "_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "HarjutuseIngliskeelneNimi TEXT, "
                 + "HarjutuseEestikeelneNimi TEXT, "
+                + "VenitusteKordi INTEGER, "
                 + "KategooriaYldine TEXT, "
                 + "KategooriaSpetsiifiline TEXT, "
                 + "KirjeldusLuhike TEXT, "
@@ -34,6 +35,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
                 + "_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + "HarjutuseIngliskeelneNimi TEXT, "
                 + "HarjutuseEestikeelneNimi TEXT, "
+                + "VenitusteKordi INTEGER, "
                 + "KategooriaYldine TEXT, "
                 + "KategooriaSpetsiifiline TEXT, "
                 + "KirjeldusLuhike TEXT, "
@@ -45,6 +47,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusEestikeeles(andmebaas,
                 "Standing Reach Down Hamstring Stretch",
                 "Reie kakspealihase venitus",
+                1,
                 "jalad",
                 "reie kakspealihas, alaselg",
                 "seistes sirgelt (põlvest sirgelt) kallutada ette",
@@ -54,6 +57,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusEestikeeles(andmebaas,
                 "Sitting Knee-to-Chest Piriformis Stretch",
                 "Tuharalihase venitus",
+                2,
                 "jalad",
                 "tuharalihas",
                 "istuda üks jalg sirgelt ja teine risti üle põlve",
@@ -63,6 +67,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusEestikeeles(andmebaas,
                 "Triceps Stretch",
                 "Triitsepsi venitus",
+                2,
                 "käed",
                 "triitseps",
                 "seistes viia käelaba turjale ja sirutada küünarnukk üles",
@@ -72,6 +77,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusEestikeeles(andmebaas,
                 "Butterfly Stretch",
                 "Liblikasendis venitus",
+                1,
                 "jalad",
                 "reie sisemine külg (sirelihas ja pikk lähendajalihas)",
                 "viia maas istudes jalatallad vastamisi",
@@ -81,6 +87,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusEestikeeles(andmebaas,
                 "Lunging Hip Flexor Stretch",
                 "Nimmelihase venitus",
+                2,
                 "kere",
                 "nimmelihas, rätsepalihas",
                 "ühel põlvel olles viia teine jalg taha",
@@ -90,6 +97,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusEestikeeles(andmebaas,
                 "Lying Quad Stretch",
                 "Lamades reie nelipealihase venitus",
+                2,
                 "jalad",
                 "reie nelipealihas",
                 "maas sirgelt lamades kõverdada pealmist jalga",
@@ -99,6 +107,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusEestikeeles(andmebaas,
                 "Side Bend Stretch",
                 "Külje painutus",
+                2,
                 "kere",
                 "selja lailihas, suur ümarlihas, eesmine saaglihas",
                 "seistes sirgelt (põlvest sirgelt) kallutada ette",
@@ -110,6 +119,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusIngliskeeles(andmebaas,
                 "Standing Reach Down Hamstring Stretch",
                 "Standing Reach Down Hamstring Stretch",
+                1,
                 "Thighs",
                 "Biceps Femoris, Semimembranosus",
                 " Stand up tall and bend forwards from the hips, reaching for your toes with your hands\n",
@@ -119,6 +129,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusIngliskeeles(andmebaas,
                 "Sitting Knee-to-Chest Piriformis Stretch",
                 "Sitting Knee-to-Chest Piriformis Stretch",
+                2,
                 "Hips",
                 "Gluteus Maximus, Gluteus Medus",
                 "Cross your leg over the other leg, and place its foot flat on the floor",
@@ -128,6 +139,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusIngliskeeles(andmebaas,
                 "Triceps Stretch",
                 "Triceps Stretch",
+                2,
                 "Arms",
                 "Triceps",
                 "Raise your left elbow and reach toward your upper back",
@@ -137,6 +149,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusIngliskeeles(andmebaas,
                 "Butterfly Stretch",
                 "Butterfly Stretch",
+                1,
                 "Thighs",
                 "Adductors of hip joint",
                 "Sitting with upright posture, bend your knees and put the pads of your feet againt one another",
@@ -146,6 +159,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusIngliskeeles(andmebaas,
                 "Lunging Hip Flexor Stretch",
                 "Lunging Hip Flexor Stretch",
+                2,
                 "Hips",
                 "Psoas muscle",
                 "Squat down with chest high, straightening hip of rear leg by pushing hips down and forward",
@@ -155,6 +169,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusIngliskeeles(andmebaas,
                 "Lying Quad Stretch",
                 "Lying Quad Stretch",
+                2,
                 "Thighs",
                 "Quadriceps",
                 "Lie on your side, pull your foot toward your butt and bend your knee to stabilize yourself",
@@ -164,6 +179,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaVenitusHarjutusIngliskeeles(andmebaas,
                 "Side Bend Stretch",
                 "Standing Side Bend Stretch",
+                2,
                 "Torso",
                 "Quadratus Lumborum, Obliques",
                 "Stand tall reaching both arms straight up and lower on side down",
@@ -181,6 +197,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
     private static void sisestaVenitusHarjutusEestikeeles(SQLiteDatabase andmebaas,
                                                           String harjutuseIngliskeelneNimi,
                                                           String harjutuseEestikeelneNimi,
+                                                          int venitusteKordi,
                                                           String kategooriaYldine,
                                                           String kategooriaSpetsiifiline,
                                                           String kirjeldusLuhike,
@@ -189,6 +206,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         ContentValues venitusHarjutuseVaartused = new ContentValues();
         venitusHarjutuseVaartused.put("HarjutuseIngliskeelneNimi", harjutuseIngliskeelneNimi);
         venitusHarjutuseVaartused.put("HarjutuseEestikeelneNimi", harjutuseEestikeelneNimi);
+        venitusHarjutuseVaartused.put("VenitusteKordi", venitusteKordi);
         venitusHarjutuseVaartused.put("KategooriaYldine", kategooriaYldine);
         venitusHarjutuseVaartused.put("KategooriaSpetsiifiline", kategooriaSpetsiifiline);
         venitusHarjutuseVaartused.put("KirjeldusLuhike", kirjeldusLuhike);
@@ -200,6 +218,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
     private static void sisestaVenitusHarjutusIngliskeeles(SQLiteDatabase andmebaas,
                                                           String harjutuseIngliskeelneNimi,
                                                           String harjutuseEestikeelneNimi,
+                                                          int venitusteKordi,
                                                           String kategooriaYldine,
                                                           String kategooriaSpetsiifiline,
                                                           String kirjeldusLuhike,
@@ -208,6 +227,7 @@ public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
         ContentValues venitusHarjutuseVaartused = new ContentValues();
         venitusHarjutuseVaartused.put("HarjutuseIngliskeelneNimi", harjutuseIngliskeelneNimi);
         venitusHarjutuseVaartused.put("HarjutuseEestikeelneNimi", harjutuseEestikeelneNimi);
+        venitusHarjutuseVaartused.put("VenitusteKordi", venitusteKordi);
         venitusHarjutuseVaartused.put("KategooriaYldine", kategooriaYldine);
         venitusHarjutuseVaartused.put("KategooriaSpetsiifiline", kategooriaSpetsiifiline);
         venitusHarjutuseVaartused.put("KirjeldusLuhike", kirjeldusLuhike);

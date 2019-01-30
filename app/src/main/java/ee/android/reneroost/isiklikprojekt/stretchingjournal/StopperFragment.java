@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -118,7 +117,7 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
 
                 if (stopperKaib && sekundid > 0) {
                     sekundid--;
-                } else if (stopperKaib && sekundid <= 0) {
+                } else if (stopperKaib) {
                     stopperKaib = false;
                 }
 

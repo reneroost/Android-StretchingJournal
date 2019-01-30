@@ -13,12 +13,12 @@ public class PeamineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_peamine);
 
         FragmentManager fragmendiHaldur = getSupportFragmentManager();
-        Fragment fragment = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner);
+        Fragment fragment = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner_harjutuse_kirjeldus);
 
         if (fragment == null) {
             fragment = new StopperFragment();
             fragmendiHaldur.beginTransaction()
-                    .add(R.id.fragmendi_konteiner, fragment)
+                    .add(R.id.fragmendi_konteiner_harjutuse_kirjeldus, fragment)
                     .commit();
         }
     }

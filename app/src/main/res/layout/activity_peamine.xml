@@ -9,7 +9,7 @@
 
     <FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/fragmendi_konteiner"
+        android:id="@+id/fragmendi_konteiner_harjutuse_kirjeldus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

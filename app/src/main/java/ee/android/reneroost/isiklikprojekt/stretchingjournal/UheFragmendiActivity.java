@@ -15,12 +15,12 @@ public abstract class UheFragmendiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fragment);
 
         FragmentManager fragmendiHaldur = getSupportFragmentManager();
-        Fragment fragment = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner);
+        Fragment fragment = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner_harjutuse_kirjeldus);
 
         if (fragment == null) {
             fragment = looFragment();
             fragmendiHaldur.beginTransaction()
-                    .add(R.id.fragmendi_konteiner, fragment)
+                    .add(R.id.fragmendi_konteiner_harjutuse_kirjeldus, fragment)
                     .commit();
         }
     }
