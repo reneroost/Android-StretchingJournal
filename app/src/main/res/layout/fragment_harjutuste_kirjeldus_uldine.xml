@@ -44,13 +44,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:textAppearance="@style/TekstiStiilHarjutuseKirjeldusAbitekst"/>
+                android:textAppearance="@style/TekstiStiilUldineAbitekst"/>
             <TextView
                 android:id="@+id/kategooria_uldine"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
-                android:textAppearance="@style/TekstiStiilHarjutuseKirjeldus"/>
+                android:textAppearance="@style/TekstiStiilUldinePohitekst"/>
         </LinearLayout>
 
         <LinearLayout
@@ -64,13 +64,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:textAppearance="@style/TekstiStiilHarjutuseKirjeldusAbitekst"/>
+                android:textAppearance="@style/TekstiStiilUldineAbitekst"/>
             <TextView
                 android:id="@+id/kategooria_spetsiifiline"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
-                android:textAppearance="@style/TekstiStiilHarjutuseKirjeldus"/>
+                android:textAppearance="@style/TekstiStiilUldinePohitekst"/>
         </LinearLayout>
 
         <LinearLayout
@@ -84,13 +84,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:textAppearance="@style/TekstiStiilHarjutuseKirjeldusAbitekst"/>
+                android:textAppearance="@style/TekstiStiilUldineAbitekst"/>
             <TextView
                 android:id="@+id/kirjeldus_luhike"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="6"
-                android:textAppearance="@style/TekstiStiilHarjutuseKirjeldus"/>
+                android:textAppearance="@style/TekstiStiilUldinePohitekst"/>
         </LinearLayout>
 
     </LinearLayout>

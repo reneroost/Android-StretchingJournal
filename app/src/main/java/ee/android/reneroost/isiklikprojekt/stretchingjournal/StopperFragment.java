@@ -20,7 +20,7 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
     private boolean stopperKaib;
     private TextView ajaVaade;
 
-    private final int[] kestused = {3, 6, 9};
+    private final int[] kestused = {30, 60, 90};
     private int valitudKestus = kestused[0];
 
     @Override

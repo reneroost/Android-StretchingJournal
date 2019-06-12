@@ -58,8 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:text="@string/vali_kestvus"/>
+        android:text="@string/vali_kestvus"
+        android:textAppearance="@style/TekstiStiilUldineAbitekst"/>
 
     <RadioGroup
         android:id="@+id/raadiogrupp_kestused"
@@ -70,27 +70,53 @@
         <RadioButton
             android:id="@+id/raadionupp_kestvus_luhike"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TekstiStiilUldinePohitekst"/>
 
         <RadioButton
             android:id="@+id/raadionupp_kestvus_keskmine"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TekstiStiilUldinePohitekst"/>
 
         <RadioButton
             android:id="@+id/raadionupp_kestvus_pikk"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TekstiStiilUldinePohitekst"/>
 
     </RadioGroup>
 
+    <View style="@style/EraldusjoonHorisontaalne"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/valitud_harjutus"
+            android:textAppearance="@style/TekstiStiilUldineAbitekst"/>
+        <TextView
+            android:id="@+id/valitud_harjutus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="reie kakspea venitus"
+            android:textAppearance="@style/TekstiStiilUldinePohitekst"/>
+
+    </LinearLayout>
     <Button
         android:id="@+id/nupp_vali_harjutus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="16dp"
-        android:text="@string/vali_harjutus"/>
+        android:text="@string/vali_harjutus_nupp"/>
 
 
 </LinearLayout>

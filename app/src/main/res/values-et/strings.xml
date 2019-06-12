@@ -7,10 +7,13 @@
     <string name="peatu">Peata</string>
     <string name="nulli">Nulli</string>
 
-    <!-- Kiirseaded -->
+    <!-- Ajaseaded -->
     <string name="vali_kestvus">Vali kestvus</string>
-    <string name="vali_harjutus">Vali harjutus</string>
     <string name="sekundid">&#160;sekundit</string>
+
+    <!-- Valitud harjutus -->
+    <string name="vali_harjutus_nupp">Vali muu harjutus</string>
+    <string name="valitud_harjutus">Praegu valitud</string>
 
     <!-- Harjutuse kirjeldus -->
     <string name="kirjelduse_liik_kategooria_uldine">Üldine kategooria</string>

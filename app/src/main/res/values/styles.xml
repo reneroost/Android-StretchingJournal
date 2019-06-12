@@ -16,13 +16,14 @@
         <item name="android:background">?android:attr/listDivider</item>
     </style>
 
-    <style name="TekstiStiilHarjutuseKirjeldusAbitekst">
-        <item name="android:textSize">16sp</item>
+    <style name="TekstiStiilUldineAbitekst">
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@android:color/darker_gray</item>
     </style>
 
-    <style name="TekstiStiilHarjutuseKirjeldus">
+    <style name="TekstiStiilUldinePohitekst">
         <item name="android:textSize">20sp</item>
     </style>
+
 
 </resources>

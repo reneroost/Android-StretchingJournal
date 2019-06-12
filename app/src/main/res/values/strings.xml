@@ -7,10 +7,13 @@
     <string name="peatu">Stop</string>
     <string name="nulli">Reset</string>
 
-    <!-- Kiirseaded -->
+    <!-- Ajaseaded -->
     <string name="vali_kestvus">Choose duration</string>
-    <string name="vali_harjutus">Choose exercise</string>
     <string name="sekundid">&#160;seconds</string>
+
+    <!-- Valitud harjutus -->
+    <string name="vali_harjutus_nupp">Choose anouther exercise</string>
+    <string name="valitud_harjutus">Currently chosen</string>
 
     <!-- Harjutuse kirjeldus -->
     <string name="kirjelduse_liik_kategooria_uldine">General category</string>
