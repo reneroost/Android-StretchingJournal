@@ -1,6 +1,10 @@
-package ee.android.reneroost.isiklikprojekt.stretchingjournal;
+package ee.android.reneroost.isiklikprojekt.stretchingjournal.avaleht;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
+import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -11,8 +15,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
+import java.util.Objects;
+
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.andmebaas.VenitamisePaevikAndmebaasiAbistaja;
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.harjutused.HarjutusteNimekirjaActivity;
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.R;
 
 public class AvalehtFragment extends Fragment implements View.OnClickListener {
 
@@ -22,6 +32,8 @@ public class AvalehtFragment extends Fragment implements View.OnClickListener {
 
     private final int[] kestused = {30, 60, 90};
     private int valitudKestus = kestused[0];
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,11 +64,11 @@ public class AvalehtFragment extends Fragment implements View.OnClickListener {
         TextView raadionuppKestusPikk = vaade.findViewById(R.id.raadionupp_kestvus_pikk);
 
         String kestus;
-        kestus = Integer.toString(kestused[0]) + getResources().getString(R.string.sekundid);
+        kestus = kestused[0] + getResources().getString(R.string.sekundid);
         raadionuppKestusLuhike.setText(kestus);
-        kestus = Integer.toString(kestused[1]) + getResources().getString(R.string.sekundid);
+        kestus = kestused[1] + getResources().getString(R.string.sekundid);
         raadionuppKestusKeskmine.setText(kestus);
-        kestus = Integer.toString(kestused[2]) + getResources().getString(R.string.sekundid);
+        kestus = kestused[2] + getResources().getString(R.string.sekundid);
         raadionuppKestusPikk.setText(kestus);
 
         final RadioGroup raadioGruppKestused = vaade.findViewById(R.id.raadiogrupp_kestused);
@@ -83,6 +95,33 @@ public class AvalehtFragment extends Fragment implements View.OnClickListener {
         Button nuppValiHarjutus = vaade.findViewById(R.id.nupp_vali_harjutus);
         nuppValiHarjutus.setOnClickListener(this);
 
+
+        // harjutuse saamine andmebaasist
+        TextView harjutuseNimi = vaade.findViewById(R.id.valitud_harjutus);
+        SQLiteOpenHelper venitamisePaevikAndmebaasiAbistaja = new VenitamisePaevikAndmebaasiAbistaja(getActivity());
+        try {
+            SQLiteDatabase andmebaas = venitamisePaevikAndmebaasiAbistaja.getReadableDatabase();
+
+            Cursor kursor = andmebaas.query(getResources().getString(R.string.harjutuste_kirjeldused),
+                    new String[]  {"HarjutuseIngliskeelneNimi", "HarjutuseEestikeelneNimi",
+                            "KategooriaYldine", "KategooriaSpetsiifiline", "KirjeldusLuhike", "KirjeldusPikk", "PildiRessursiId"},
+                    "_id = ?",
+                    new String[] {Integer.toString(1)},
+                    null, null, null);
+
+            if (kursor.moveToFirst()) {
+                String harjutuseNimiTekst = kursor.getString(1);
+
+                harjutuseNimi.setText(harjutuseNimiTekst);
+            }
+            kursor.close();
+            andmebaas.close();
+        } catch (SQLiteException e) {
+            Toast rost = Toast.makeText(getActivity(),
+                    getResources().getString(R.string.andmebaas_pole_saadaval), Toast.LENGTH_SHORT);
+            rost.show();
+        }
+
         return vaade;
     }
 
@@ -101,7 +140,7 @@ public class AvalehtFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.nupp_vali_harjutus:
                 Intent minuKavatsus = new Intent(getActivity(), HarjutusteNimekirjaActivity.class);
-                getActivity().startActivity(minuKavatsus);
+                Objects.requireNonNull(getActivity()).startActivity(minuKavatsus);
                 break;
         }
     }

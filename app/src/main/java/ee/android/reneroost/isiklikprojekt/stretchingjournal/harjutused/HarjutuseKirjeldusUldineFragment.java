@@ -1,4 +1,4 @@
-package ee.android.reneroost.isiklikprojekt.stretchingjournal;
+package ee.android.reneroost.isiklikprojekt.stretchingjournal.harjutused;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -15,6 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.R;
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.andmebaas.VenitamisePaevikAndmebaasiAbistaja;
+
 public class HarjutuseKirjeldusUldineFragment extends Fragment {
 
 
@@ -22,13 +27,11 @@ public class HarjutuseKirjeldusUldineFragment extends Fragment {
 
     private boolean kuvatakseTapneKirjeldus = false;
 
-
-
     @Override
     public View onCreateView(@NonNull LayoutInflater taispuhuja, ViewGroup konteiner,
                                 Bundle savedInstanceState) {
 
-        View vaade = taispuhuja.inflate(R.layout.fragment_harjutuste_kirjeldus_uldine, konteiner, false);
+        View vaade = taispuhuja.inflate(R.layout.fragment_harjutuse_kirjeldus_uldine, konteiner, false);
 
         TextView kategooriaUldineAbitekst = vaade.findViewById(R.id.kategooria_uldine_abitekst);
         TextView kategooriaSpetsiifilineAbitekst = vaade.findViewById(R.id.kategooria_spetsiifiline_abitekst);
@@ -63,7 +66,7 @@ public class HarjutuseKirjeldusUldineFragment extends Fragment {
             }
         });
 
-        String harjutuseId = (String) (getActivity()).getIntent().getStringExtra(HarjutuseKirjeldusActivity.EKSTRA_HARJUTUSE_ID);
+        String harjutuseId = (Objects.requireNonNull(getActivity())).getIntent().getStringExtra(HarjutuseKirjeldusActivity.EKSTRA_HARJUTUSE_ID);
 
         SQLiteOpenHelper venitamisePaevikAndmebaasiAbistaja = new VenitamisePaevikAndmebaasiAbistaja(getActivity());
         try {
@@ -77,7 +80,7 @@ public class HarjutuseKirjeldusUldineFragment extends Fragment {
                     null, null, null);
 
             if (kursor.moveToFirst()) {
-                String harjutuseIngliskeelneNimiTekst = kursor.getString(0);
+                //String harjutuseIngliskeelneNimiTekst = kursor.getString(0);
                 String harjutuseEestikeelneNimiTekst = kursor.getString(1);
                 String kategooriaYldineTekst = kursor.getString(2);
                 String kategooriaSpetsiifilineTekst = kursor.getString(3);

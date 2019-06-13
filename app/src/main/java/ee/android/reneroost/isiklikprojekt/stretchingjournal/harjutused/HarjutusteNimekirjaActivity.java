@@ -1,11 +1,13 @@
-package ee.android.reneroost.isiklikprojekt.stretchingjournal;
+package ee.android.reneroost.isiklikprojekt.stretchingjournal.harjutused;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class PeamineActivity extends AppCompatActivity {
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.R;
+
+public class HarjutusteNimekirjaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,12 +15,12 @@ public class PeamineActivity extends AppCompatActivity {
         setContentView(R.layout.activity_raam_uldine);
 
         FragmentManager fragmendiHaldur = getSupportFragmentManager();
-        Fragment fragment = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner_harjutuse_kirjeldus);
+        Fragment fragment = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner_uldine);
 
         if (fragment == null) {
-            fragment = new AvalehtFragment();
+            fragment = new HarjutusteNimekirjaFragment();
             fragmendiHaldur.beginTransaction()
-                    .add(R.id.fragmendi_konteiner_harjutuse_kirjeldus, fragment)
+                    .add(R.id.fragmendi_konteiner_uldine, fragment)
                     .commit();
         }
     }

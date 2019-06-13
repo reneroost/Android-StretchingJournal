@@ -1,16 +1,18 @@
-package ee.android.reneroost.isiklikprojekt.stretchingjournal;
+package ee.android.reneroost.isiklikprojekt.stretchingjournal.andmebaas;
 
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.R;
+
 public class VenitamisePaevikAndmebaasiAbistaja extends SQLiteOpenHelper {
 
     private static final String ANDMEBAASI_NIMI = "venitamisepaevik";
     private static final int ANDMEBAASI_VERSIOON = 1;
 
-    VenitamisePaevikAndmebaasiAbistaja(Context kontekst) {
+    public VenitamisePaevikAndmebaasiAbistaja(Context kontekst) {
         super(kontekst, ANDMEBAASI_NIMI, null, ANDMEBAASI_VERSIOON);
     }
 

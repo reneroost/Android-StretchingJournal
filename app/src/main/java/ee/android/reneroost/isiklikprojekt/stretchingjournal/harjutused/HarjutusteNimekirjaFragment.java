@@ -1,4 +1,4 @@
-package ee.android.reneroost.isiklikprojekt.stretchingjournal;
+package ee.android.reneroost.isiklikprojekt.stretchingjournal.harjutused;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -15,6 +15,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
+
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.R;
+import ee.android.reneroost.isiklikprojekt.stretchingjournal.andmebaas.VenitamisePaevikAndmebaasiAbistaja;
 
 public class HarjutusteNimekirjaFragment extends Fragment {
 
