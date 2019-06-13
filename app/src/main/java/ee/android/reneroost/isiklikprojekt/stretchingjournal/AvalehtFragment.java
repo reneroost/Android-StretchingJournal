@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class StopperFragment extends Fragment implements View.OnClickListener {
+public class AvalehtFragment extends Fragment implements View.OnClickListener {
 
     private int sekundid;
     private boolean stopperKaib;
@@ -33,7 +33,7 @@ public class StopperFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater taispuhuja, ViewGroup konteiner,
                              Bundle savedInstanceState) {
-        View vaade = taispuhuja.inflate(R.layout.fragment_stopper, konteiner, false);
+        View vaade = taispuhuja.inflate(R.layout.fragment_avaleht, konteiner, false);
 
         ajaVaade = vaade.findViewById(R.id.tekstivaade_aeg);
         sekundid = valitudKestus;

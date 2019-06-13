@@ -10,7 +10,7 @@ public class HarjutusteNimekirjaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_harjutuste_nimekiri);
+        setContentView(R.layout.activity_raam_uldine);
 
         FragmentManager fragmendiHaldur = getSupportFragmentManager();
         Fragment fragment = fragmendiHaldur.findFragmentById(R.id.fragmendi_konteiner_harjutuse_kirjeldus);
